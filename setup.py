@@ -267,6 +267,40 @@ def extras_requires(conda_format=False):
         extras['bundles'] = [
             'yfinance>=0.1.70',
         ]
+        # Blockchain & DeFi dependencies
+        extras['blockchain'] = [
+            'web3>=6.0.0',
+            'eth-account>=0.8.0',
+            'solana>=0.30.0',
+            'python-bitcoinlib>=0.12.0',
+        ]
+        extras['defi'] = [
+            'web3>=6.0.0',
+            'uniswap-python>=0.7.0',
+        ]
+        # Hardware integration dependencies
+        extras['hardware'] = [
+            'RPi.GPIO>=0.7.0; platform_system=="Linux"',
+            'ledgerblue>=0.1.0',
+            'trezorlib>=0.13.0',
+            'psutil>=5.8.0',
+        ]
+        # Education platform dependencies
+        extras['education'] = [
+            'nbformat>=5.0.0',
+            'nbconvert>=6.0.0',
+            'jupyter>=1.0.0',
+        ]
+        # Full ecosystem with all new features
+        extras['full_ecosystem'] = [
+            'web3>=6.0.0',
+            'eth-account>=0.8.0',
+            'solana>=0.30.0',
+            'uniswap-python>=0.7.0',
+            'nbformat>=5.0.0',
+            'jupyter>=1.0.0',
+            'psutil>=5.8.0',
+        ]
         extras['all_advanced'] = [
             'torch>=1.9.0',
             'transformers>=4.0.0',
