@@ -224,6 +224,29 @@ def extras_requires(conda_format=False):
                                  conda_format=conda_format)
         for extra in ('dev', 'talib')
     }
+    
+    # Add new optional dependencies for enhanced features
+    if not conda_format:
+        extras['live'] = [
+            'alpaca-trade-api>=2.0.0',
+            'websockets>=10.0',
+        ]
+        extras['ml'] = [
+            'scikit-learn>=1.0.0',
+            'joblib>=1.0.0',
+        ]
+        extras['dashboard'] = [
+            'fastapi>=0.68.0',
+            'uvicorn>=0.15.0',
+            'jinja2>=3.0.0',
+        ]
+        extras['crypto'] = [
+            'ccxt>=2.0.0',
+        ]
+        extras['bundles'] = [
+            'yfinance>=0.1.70',
+        ]
+    
     extras['all'] = [req for reqs in extras.values() for req in reqs]
 
     return extras
