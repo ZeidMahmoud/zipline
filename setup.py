@@ -235,6 +235,27 @@ def extras_requires(conda_format=False):
             'scikit-learn>=1.0.0',
             'joblib>=1.0.0',
         ]
+        extras['deep_learning'] = [
+            'torch>=1.9.0',
+            'transformers>=4.0.0',
+        ]
+        extras['reinforcement'] = [
+            'gym>=0.21.0',
+        ]
+        extras['quant'] = [
+            'arch>=5.0.0',
+            'statsmodels>=0.13.0',
+            'cvxpy>=1.1.0',
+            'hmmlearn>=0.2.0',
+            'pykalman>=0.9.5',
+        ]
+        extras['nlp'] = [
+            'transformers>=4.0.0',
+            'nltk>=3.6.0',
+        ]
+        extras['signals'] = [
+            'pywavelets>=1.1.0',
+        ]
         extras['dashboard'] = [
             'fastapi>=0.68.0',
             'uvicorn>=0.15.0',
@@ -245,6 +266,19 @@ def extras_requires(conda_format=False):
         ]
         extras['bundles'] = [
             'yfinance>=0.1.70',
+        ]
+        extras['all_advanced'] = [
+            'torch>=1.9.0',
+            'transformers>=4.0.0',
+            'scikit-learn>=1.0.0',
+            'gym>=0.21.0',
+            'arch>=5.0.0',
+            'statsmodels>=0.13.0',
+            'cvxpy>=1.1.0',
+            'hmmlearn>=0.2.0',
+            'pykalman>=0.9.5',
+            'pywavelets>=1.1.0',
+            'nltk>=3.6.0',
         ]
     
     extras['all'] = [req for reqs in extras.values() for req in reqs]
