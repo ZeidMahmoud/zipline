@@ -267,6 +267,46 @@ def extras_requires(conda_format=False):
         extras['bundles'] = [
             'yfinance>=0.1.70',
         ]
+        # New platform features
+        extras['competition'] = [
+            'fastapi>=0.68.0',
+            'sqlalchemy>=1.4.0',
+            'redis>=4.0.0',
+        ]
+        extras['marketplace'] = [
+            'stripe>=2.60.0',
+            'paypalrestsdk>=1.13.0',
+        ]
+        extras['automl'] = [
+            'optuna>=3.0.0',
+            'ray[tune]>=2.0.0',
+            'deap>=1.3.0',
+        ]
+        extras['nlp_trading'] = [
+            'openai>=0.27.0',
+            'speechrecognition>=3.8.0',
+            'pyttsx3>=2.90',
+        ]
+        extras['social'] = [
+            'sqlalchemy>=1.4.0',
+            'redis>=4.0.0',
+            'websockets>=10.0',
+        ]
+        extras['league'] = [
+            'sqlalchemy>=1.4.0',
+            'redis>=4.0.0',
+        ]
+        extras['full_platform'] = [
+            'fastapi>=0.68.0',
+            'sqlalchemy>=1.4.0',
+            'redis>=4.0.0',
+            'stripe>=2.60.0',
+            'optuna>=3.0.0',
+            'ray[tune]>=2.0.0',
+            'openai>=0.27.0',
+            'deap>=1.3.0',
+            'websockets>=10.0',
+        ]
         extras['all_advanced'] = [
             'torch>=1.9.0',
             'transformers>=4.0.0',
